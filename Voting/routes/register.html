@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <style>
+        #address{
+            width: 30%;
+        }
+        .image1{
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 10px;
+            width: 30%;
+        }
+        #role{
+             border: 1px solid black;
+            border-radius: 5px;
+            padding: 15px;
+            width: 30%;
+        }
+        #role select{
+             border: 1px solid black;
+            border-radius: 5px;
+        }
+    </style>
+    <center>
+     <div id="headersection">
+     <h1>Online Voting System</h1>
+     <hr>
+     </div>
+     <div id="bodysection">
+     <h3>Registration</h3>
+     <form action="../api/reg.php" method="POST" enctype="multipart/form-data">
+     <input type="name" name="name" placeholder="enter name">
+        <input type="number" name="mobile" placeholder="enter mobile"><br><br>
+        <input type="password" name="password" placeholder="enter password">
+       <input type="password" name="cpassword" placeholder="enter cpassword"><br><br>
+       <input id="address" type="text" name="address" placeholder="enter address"><br><br>
+       
+       <div class="image1"> 
+          <input type="file" name="photo">
+       </div>
+       <br>
+      <div id="role">
+        Select Role<select name="role">
+            <option value="1">Voter</option>
+            <option value="2">Group</option>
+        </select>
+        </div>
+     
+         <br>
+        <button id="loginbtn">Register</button><br><br>
+        Alredy User ?<a href="../">Login Here</a>
+    </form>
+    </div>
+        </center> 
+</body>
+</html>
